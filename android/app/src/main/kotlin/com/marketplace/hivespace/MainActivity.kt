@@ -1,4 +1,4 @@
-package com.example.flutter_finance_app
+package com.marketplace.hivespace
 
 import io.flutter.embedding.android.FlutterActivity
 

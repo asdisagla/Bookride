@@ -45,6 +45,7 @@ class _DailyPageState extends State<DailyPage> {
                   SizedBox(
                     height: 15,
                   ),
+
                   Column(
                     children: [
                       Container(
