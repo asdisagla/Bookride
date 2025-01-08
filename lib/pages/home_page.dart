@@ -1,9 +1,8 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_finance_app/pages/daily_page.dart';
+import 'package:flutter_finance_app/pages/profile.dart';
 import 'package:flutter_finance_app/pages/transection_page.dart';
 import 'package:flutter_finance_app/theme/colors.dart';
 
@@ -19,17 +18,14 @@ class _HomePageState extends State<HomePage> {
 
   
 List<Widget> pages = [
-    DailyPage(),
     TransectionPage(),
-    TransectionPage(),
-    TransectionPage(),
-    TransectionPage(),
+    profilePage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primary,
+      backgroundColor: Colors.white,
       body: getBody(),
       bottomNavigationBar: getFooter(),
       floatingActionButton: SafeArea(
@@ -39,10 +35,11 @@ List<Widget> pages = [
           child: FloatingActionButton(
             onPressed: () {},
             child: Icon(
-              Icons.add,
+              Icons.add_shopping_cart,
+              color: Colors.black,
               size: 20,
             ),
-            backgroundColor: buttoncolor,
+            backgroundColor: Colors.orangeAccent,
             // shape:
             //     BeveledRectangleBorder(borderRadius: BorderRadius.circular(4)),
           ),
@@ -62,15 +59,14 @@ List<Widget> pages = [
   Widget getFooter() {
     List<IconData> iconItems = [
       CupertinoIcons.home,
-      CupertinoIcons.creditcard,
-      CupertinoIcons.money_dollar,
       CupertinoIcons.person,
     ];
     return AnimatedBottomNavigationBar(
-       backgroundColor: primary,
+       backgroundColor: Colors.black,
        icons: iconItems,
         splashColor: secondary,
-        inactiveColor: black.withOpacity(0.5),
+        activeColor: Colors.orangeAccent,
+        inactiveColor: Colors.white,
         gapLocation: GapLocation.center,
         activeIndex: pageIndex,
         notchSmoothness: NotchSmoothness.softEdge,

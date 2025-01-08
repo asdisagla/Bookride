@@ -16,6 +16,7 @@ class _SignUpPageState extends State<SignUpPage> {
   TextEditingController password = TextEditingController();
   TextEditingController firstname = TextEditingController();
   TextEditingController Lastname = TextEditingController();
+  TextEditingController biodata = TextEditingController();
   // signUp(
   //     BuildContext context, String name, String email, String password) async {
   //   try {
@@ -114,7 +115,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 80),
+                        const SizedBox(height: 30),
                         Text(
                           "Register Account",
                           style: Theme.of(context).textTheme.titleLarge!.copyWith(
@@ -163,6 +164,20 @@ class _SignUpPageState extends State<SignUpPage> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
+                        ),
+                        const SizedBox(height: 20),
+                        TextFormField(
+                          controller: biodata,
+                          decoration: InputDecoration(
+                            hintText: 'Enter your Biodata',
+                            isDense: true,
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          maxLines: 2,  // maximum number of lines allowed
                         ),
                         const SizedBox(height: 20),
                         TextFormField(

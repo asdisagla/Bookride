@@ -5,14 +5,14 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_finance_app/theme/colors.dart';
 import 'package:icon_badge/icon_badge.dart';
 
-class DailyPage extends StatefulWidget {
-  const DailyPage({super.key});
+class profilePage extends StatefulWidget {
+  const profilePage({super.key});
 
   @override
-  State<DailyPage> createState() => _DailyPageState();
+  State<profilePage> createState() => _profilePageState();
 }
 
-class _DailyPageState extends State<DailyPage> {
+class _profilePageState extends State<profilePage> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -23,7 +23,18 @@ class _DailyPageState extends State<DailyPage> {
           Container(
             margin: EdgeInsets.only(top: 25, left: 25, right: 25, bottom: 10),
             decoration: BoxDecoration(
-                color: white,
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Colors.black,
+                    Colors.black,
+                    Colors.black,
+                    Colors.orangeAccent,
+                    Colors.black,
+                    Colors.orangeAccent,
+                  ],
+                ),
                 borderRadius: BorderRadius.circular(25),
                 boxShadow: [
                   BoxShadow(
@@ -38,10 +49,6 @@ class _DailyPageState extends State<DailyPage> {
                   top: 20, bottom: 25, right: 20, left: 20),
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Icon(Icons.bar_chart), Icon(Icons.more_vert)],
-                  ),
                   SizedBox(
                     height: 15,
                   ),
@@ -70,17 +77,18 @@ class _DailyPageState extends State<DailyPage> {
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
-                                  color: mainFontColor),
+                                  color: Colors.white),
                             ),
                             SizedBox(
                               height: 10,
                             ),
                             Text(
-                              "Software Developer",
+                              "User Biodata Here i am Software Developer",
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
-                                  color: black),
+                                  color: Colors.white),
                             ),
                           ],
                         ),
@@ -88,7 +96,7 @@ class _DailyPageState extends State<DailyPage> {
                     ],
                   ),
                   SizedBox(
-                    height: 50,
+                    height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -96,21 +104,21 @@ class _DailyPageState extends State<DailyPage> {
                       Column(
                         children: [
                           Text(
-                            "\$8900",
+                            "8900",
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
-                                color: mainFontColor),
+                                color: Colors.white),
                           ),
                           SizedBox(
                             height: 5,
                           ),
                           Text(
-                            "Income",
+                            "Icoins",
                             style: TextStyle(
                                 fontSize: 12,
-                                fontWeight: FontWeight.w100,
-                                color: black),
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
                           ),
                         ],
                       ),
@@ -122,21 +130,21 @@ class _DailyPageState extends State<DailyPage> {
                       Column(
                         children: [
                           Text(
-                            "\$5500",
+                            "5500",
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
-                                color: mainFontColor),
+                                color: Colors.white),
                           ),
                           SizedBox(
                             height: 5,
                           ),
                           Text(
-                            "Expenses",
+                            "Diamonds",
                             style: TextStyle(
                                 fontSize: 12,
-                                fontWeight: FontWeight.w100,
-                                color: black),
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
                           ),
                         ],
                       ),
@@ -148,21 +156,21 @@ class _DailyPageState extends State<DailyPage> {
                       Column(
                         children: [
                           Text(
-                            "\$890",
+                            "890",
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
-                                color: mainFontColor),
+                                color: Colors.white),
                           ),
                           SizedBox(
                             height: 5,
                           ),
                           Text(
-                            "Loan",
+                            "Orders",
                             style: TextStyle(
                                 fontSize: 12,
-                                fontWeight: FontWeight.w100,
-                                color: black),
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
                           ),
                         ],
                       ),
@@ -173,56 +181,9 @@ class _DailyPageState extends State<DailyPage> {
             ),
           ),
           SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 25, right: 25),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: [
-                    Row(
-                      children: [
-                         Text("Overview",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: mainFontColor,
-                    )),
-                    IconBadge(
-        icon: Icon(Icons.notifications_none),
-        itemCount: 1,
-        badgeColor: Colors.red,
-        itemColor: mainFontColor,
-        hideZero: true,
-        top: -1,
-        onTap: () {
-          print('test');
-        },
-      ),
-                      ],
-                    )
-                  ],
-                ),
-                // Text("Overview",
-                //     style: TextStyle(
-                //       fontWeight: FontWeight.bold,
-                //       fontSize: 20,
-                //       color: mainFontColor,
-                //     )),
-                Text("Jan 16, 2023",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 13,
-                      color: mainFontColor,
-                    )),
-              ],
-            ),
-          ),
-          SizedBox(
             height: 5,
           ),
+
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
@@ -237,7 +198,18 @@ class _DailyPageState extends State<DailyPage> {
                           right: 25,
                         ),
                         decoration: BoxDecoration(
-                            color: white,
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                Colors.black,
+                                Colors.black,
+                                Colors.black,
+                                Colors.orangeAccent,
+                                Colors.black,
+                                Colors.orangeAccent,
+                              ],
+                            ),
                             borderRadius: BorderRadius.circular(25),
                             boxShadow: [
                               BoxShadow(
@@ -256,12 +228,12 @@ class _DailyPageState extends State<DailyPage> {
                                 width: 50,
                                 height: 50,
                                 decoration: BoxDecoration(
-                                  color: arrowbgColor,
+                                  color: Colors.white,
                                   borderRadius: BorderRadius.circular(15),
                                   // shape: BoxShape.circle
                                 ),
                                 child: Center(
-                                    child: Icon(Icons.arrow_upward_rounded)),
+                                    child: Icon(Icons.edit)),
                               ),
                               SizedBox(
                                 width: 15,
@@ -275,41 +247,16 @@ class _DailyPageState extends State<DailyPage> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          "Sent",
+                                          "Edit Profile",
                                           style: TextStyle(
                                               fontSize: 15,
-                                              color: black,
+                                              color: Colors.white,
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Text(
-                                          "Sending Payment to Clients",
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              color: black.withOpacity(0.5),
-                                              fontWeight: FontWeight.w400),
-                                        ),
+
                                       ]),
                                 ),
                               ),
-                              Expanded(
-                                child: Container(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Text(
-                                        "\$150",
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                            color: black),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              )
                             ],
                           ),
                         ),
@@ -317,20 +264,29 @@ class _DailyPageState extends State<DailyPage> {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 5,
-                ),
+
                 Row(
                   children: [
                     Expanded(
                       child: Container(
                         margin: EdgeInsets.only(
-                          top: 10,
+                          top: 20,
                           left: 25,
                           right: 25,
                         ),
                         decoration: BoxDecoration(
-                            color: white,
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                Colors.black,
+                                Colors.black,
+                                Colors.black,
+                                Colors.orangeAccent,
+                                Colors.black,
+                                Colors.orangeAccent,
+                              ],
+                            ),
                             borderRadius: BorderRadius.circular(25),
                             boxShadow: [
                               BoxShadow(
@@ -349,12 +305,12 @@ class _DailyPageState extends State<DailyPage> {
                                 width: 50,
                                 height: 50,
                                 decoration: BoxDecoration(
-                                  color: arrowbgColor,
+                                  color: Colors.white,
                                   borderRadius: BorderRadius.circular(15),
                                   // shape: BoxShape.circle
                                 ),
                                 child: Center(
-                                    child: Icon(Icons.arrow_downward_rounded)),
+                                    child: Icon(Icons.settings)),
                               ),
                               SizedBox(
                                 width: 15,
@@ -365,44 +321,19 @@ class _DailyPageState extends State<DailyPage> {
                                   child: Column(
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                      CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          "Receive",
+                                          "Settings",
                                           style: TextStyle(
                                               fontSize: 15,
-                                              color: black,
+                                              color: Colors.white,
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Text(
-                                          "Receiving Payment from company",
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              color: black.withOpacity(0.5),
-                                              fontWeight: FontWeight.w400),
-                                        ),
+
                                       ]),
                                 ),
                               ),
-                              Expanded(
-                                child: Container(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Text(
-                                        "\$250",
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                            color: black),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              )
                             ],
                           ),
                         ),
@@ -410,20 +341,29 @@ class _DailyPageState extends State<DailyPage> {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 5,
-                ),
+
                 Row(
                   children: [
                     Expanded(
                       child: Container(
                         margin: EdgeInsets.only(
-                          top: 10,
+                          top: 20,
                           left: 25,
                           right: 25,
                         ),
                         decoration: BoxDecoration(
-                            color: white,
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                Colors.black,
+                                Colors.black,
+                                Colors.black,
+                                Colors.orangeAccent,
+                                Colors.black,
+                                Colors.orangeAccent,
+                              ],
+                            ),
                             borderRadius: BorderRadius.circular(25),
                             boxShadow: [
                               BoxShadow(
@@ -442,12 +382,12 @@ class _DailyPageState extends State<DailyPage> {
                                 width: 50,
                                 height: 50,
                                 decoration: BoxDecoration(
-                                  color: arrowbgColor,
+                                  color: Colors.white,
                                   borderRadius: BorderRadius.circular(15),
                                   // shape: BoxShape.circle
                                 ),
                                 child: Center(
-                                    child: Icon(CupertinoIcons.money_dollar)),
+                                    child: Icon(Icons.shopping_cart)),
                               ),
                               SizedBox(
                                 width: 15,
@@ -457,44 +397,97 @@ class _DailyPageState extends State<DailyPage> {
                                   width: (size.width - 90) * 0.7,
                                   child: Column(
                                       mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          "Loan",
+                                          "Shopping Cart",
                                           style: TextStyle(
                                               fontSize: 15,
-                                              color: black,
+                                              color: Colors.white,
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Text(
-                                          "Loan for the Car",
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              color: black.withOpacity(0.5),
-                                              fontWeight: FontWeight.w400),
-                                        ),
+
                                       ]),
                                 ),
                               ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        margin: EdgeInsets.only(
+                          top: 20,
+                          left: 25,
+                          right: 25,
+                        ),
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                Colors.black,
+                                Colors.black,
+                                Colors.black,
+                                Colors.orangeAccent,
+                                Colors.black,
+                                Colors.orangeAccent,
+                              ],
+                            ),
+                            borderRadius: BorderRadius.circular(25),
+                            boxShadow: [
+                              BoxShadow(
+                                color: grey.withOpacity(0.03),
+                                spreadRadius: 10,
+                                blurRadius: 3,
+                                // changes position of shadow
+                              ),
+                            ]),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, bottom: 10, right: 20, left: 20),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15),
+                                  // shape: BoxShape.circle
+                                ),
+                                child: Center(
+                                    child: Icon(Icons.logout)),
+                              ),
+                              SizedBox(
+                                width: 15,
+                              ),
                               Expanded(
                                 child: Container(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Text(
-                                        "\$400",
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                            color: black),
-                                      )
-                                    ],
-                                  ),
+                                  width: (size.width - 90) * 0.7,
+                                  child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Log Out",
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+
+                                      ]),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
