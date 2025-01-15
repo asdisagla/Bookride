@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_finance_app/pages/login_page.dart';
-import 'package:flutter_finance_app/pages/onboarding/onboarding_screen.dart';
+import 'package:flutter_finance_app/pages/tabbar.dart';
+import 'package:flutter_finance_app/theme/colors.dart';
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
             () => Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-                builder: (context) => const OnboardingScreen())));
+                builder: (context) => const Tabbar())));
   }
   @override
   void initState() {
@@ -27,20 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Colors.black,
-              Colors.black,
-              Colors.black,
-              Colors.orangeAccent,
-              Colors.black,
-              Colors.orangeAccent,
-            ],
-          ),
-        ),
+      color: white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(

@@ -39,6 +39,14 @@ dependencies:
   animated_bottom_navigation_bar: ^1.1.0+1
   percent_indicator: ^4.0.1
   icon_badge: ^1.0.0
+  image_picker:
+  url_launcher:
+  fluttertoast:
+  path_provider:
+  intl:
+  sqflite:
+  carousel_slider:  # Add this dependency for carousel slider
+  provider: ^5.0.0
 
 
 dev_dependencies:
@@ -67,6 +75,7 @@ flutter:
   assets:
     - assets/logo.png
     - assets/images/
+    - assets/icons/
   fonts:
     - family: Mulish
       fonts:
